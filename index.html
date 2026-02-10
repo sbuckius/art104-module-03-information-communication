@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information & Communication Links (compiled with the support of AI so might have problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f3f4f6;
+        }
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        input, select {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .big-idea {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #111827;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+
+        .theme {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+        .theme h3 {
+            margin-top: 0;
+            color: #1f2937;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #4b5563;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .links a {
+            display: block;
+            margin-left: 15px;
+            margin-bottom: 5px;
+            color: #2563eb;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        .links a:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+        .period-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            margin-left: 8px;
+            background: #e5e7eb;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Information & Communication Technologies Explorer</h1> 
+<h3>(Sarah compiled all links but AI helped make the webpage so there might be errors)</h3>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search technologies, themes, or resources...">
+            <select id="timelineFilter">
+                <option value="all">All Time Periods</option>
+                <option value="ancient">Ancient / Pre-1500</option>
+                <option value="industrial">Industrial (1500–1950)</option>
+                <option value="digital">Digital (1950–2000)</option>
+                <option value="contemporary">Contemporary (2000–Now)</option>
+            </select>
+        </div>
+    </header>
+    <div class="container" id="content"></div>
+    
+    <script>
+        const data = [
+            {
+                bigIdea: "Power, Capital & Control",
+                themes: [
+                    {
+                        name: "Big Data",
+                        period: "digital",
+                        links: [
+                            ["Big Data", "https://en.wikipedia.org/wiki/Big_data"],
+                            ["Database", "https://en.wikipedia.org/wiki/Database"],
+                            ["Data mining", "https://en.wikipedia.org/wiki/Data_mining"],
+                            ["Cloud computing", "https://en.wikipedia.org/wiki/Cloud_computing"]
+                        ],
+                        academic: [
+                            ["Big Data in Digital Art History", "https://journals.ub.uni-heidelberg.de/index.php/dah/article/view/33527/27215"],
+                            ["Social Media Mining: The Effects of Big Data", "https://law.yale.edu/mfia/case-disclosed/social-media-mining-effects-big-data-age-social-media"],
+                            ["The Hidden Biases in Big Data", "https://hbr.org/2013/04/the-hidden-biases-in-big-data"],
+                            ["Critiquing Big Data: Politics, Ethics, Epistemology", "https://ijoc.org/index.php/ijoc/article/viewFile/2167/1164"],
+                            ["Big Data And The Problem Of Bias In Higher Education", "https://www.forbes.com/sites/audreymurrell/2019/05/30/big-data-and-the-problem-of-bias-in-higher-education/"],
+                            ["Telling Stories with Numbers", "https://www.britishcouncil.org/anyone-anywhere/explore/digital-creativity/telling-stories-numbers"],
+                            ["BarabasiLab: Big Data & Networking the Artworld", "https://www.xibtmagazine.com/2022/09/barabasilab-big-data-networking-the-artworld/"]
+                        ],
+                        artists: [
+                            ["Refik Anadol - MoMA Data Art", "https://www.artnews.com/art-news/artists/moma-museum-of-modern-art-refik-anadol-data-ai-art-1234678904/"],
+                            ["6 Artists Who Have Swept Data Art Into the Digital Age", "https://medium.com/@Infogram/meet-6-artists-who-have-swept-data-art-into-the-digital-age-d5c5ae805bab"]
+                        ]
+                    },
+                    {
+                        name: "Surveillance Capitalism",
+                        period: "contemporary",
+                        links: [
+                            ["Surveillance capitalism", "https://en.wikipedia.org/wiki/Surveillance_capitalism"],
+                            ["Mass surveillance", "https://en.wikipedia.org/wiki/Mass_surveillance"],
+                            ["Internet of Things", "https://en.wikipedia.org/wiki/Internet_of_things"]
+                        ],
+                        academic: [
+                            ["Surveillance Capitalism - Academic Paper 1", "https://www.eecis.udel.edu/~mlm/teaching/Computing-For-Social-Good-s23/docs/The-Age-Of-Surveillance-Capitalism-Zuboff.pdf"],
+                            ["Surveillance Capitalism - Academic Paper 2", "https://journals.sagepub.com/doi/pdf/10.1057/jit.2015.5"],
+                            ["Digital Age: Surveillance Culture under Artistic Intervention", "https://www.scirp.org/journal/paperinformation?paperid=130016"],
+                            ["Surveillance, Panopticism, and Self-Discipline", "https://ora.ox.ac.uk/objects/uuid:a8f5e604-0e3e-42d2-b373-a4e650b39dcb/files/maf514cbb3c5913f4bb3dcd65f5d1d731"],
+                            ["Surveillance in the Digital Age", "https://www.researchgate.net/publication/378374414_Surveillance_in_the_Digital_Age"]
+                        ],
+                        artists: [
+                            ["Art in the 21st Century: The Threat of Surveillance Capitalism", "https://medium.com/@abyron267/art-in-the-21st-century-the-threat-of-surveillance-capitalism-640765505d49"],
+                            ["Surveillance Capitalism Exhibition", "https://echogonewrong.com/exhibition-surveillance-capitalism-varvara-mar-sodu-4/"],
+                            ["From Surveillance Capitalism to Glitch Capitalism", "https://schloss-post.com/from-surveillance-capitalism-to-glitch-capitalism/"],
+                            ["Art in the Datacity", "https://www.cambridge.org/core/books/abs/digital-art-in-ireland/art-in-the-datacity-critical-data-art-in-the-age-of-surveillance-capitalism/5F096559B7211355B06749315025AC6C"],
+                            ["IFA Contemporary: Art and Surveillance", "https://ifacontemporary.org/art-and-surveillance/"],
+                            ["Marie Sester - ACCESS", "https://sester.net/access/"]
+                        ]
+                    },
+                    {
+                        name: "Privacy",
+                        period: "contemporary",
+                        links: [
+                            ["Privacy", "https://en.wikipedia.org/wiki/Privacy"],
+                            ["Data protection", "https://en.wikipedia.org/wiki/Data_protection"],
+                            ["General Data Protection Regulation", "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"]
+                        ],
+                        academic: [
+                            ["Understanding Privacy in the Digital Age", "https://digitalprivacy.ieee.org/publications/topics/understanding-privacy-in-the-digital-age"],
+                            ["Addressing the Digital Privacy Landscape in the Arts", "https://amt-lab.org/blog/2020/12/digital-privacy-arts"]
+                        ],
+                        artists: [
+                            ["Big Data Privacy Interactive Art", "https://mobilisationlab.org/stories/big-data-privacy-interactive-art/"],
+                            ["Nothing to Hide: Art, Surveillance & Privacy", "https://www.realartways.org/event/nothing-hide-art-surveillance-privacy/"],
+                            ["Think Privacy - DigiArt21", "http://www.digiart21.org/art/think-privacy"],
+                            ["Artists Explore Surveillance, Security & Privacy", "https://sjmusart.org/press-release/artists-explore-surveillance-security-data-collection-privacy-and-democracy-new"]
+                        ]
+                    },
+                    {
+                        name: "Marketing & Advertising",
+                        period: "industrial",
+                        links: [
+                            ["Digital marketing", "https://en.wikipedia.org/wiki/Digital_marketing"],
+                            ["Targeted advertising", "https://en.wikipedia.org/wiki/Targeted_advertising"],
+                            ["Behavioral targeting", "https://en.wikipedia.org/wiki/Behavioral_targeting"]
+                        ],
+                        academic: [
+                            ["Intention Economy: The Future of Advertising", "https://www.fastcompany.com/91263596/what-is-intention-economy-ai-companion-manipulating-ratting-you-out-advertising-chatbot"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Media, Attention & Influence",
+                themes: [
+                    {
+                        name: "Attention Economy",
+                        period: "contemporary",
+                        links: [
+                            ["Attention economy", "https://en.wikipedia.org/wiki/Attention_economy"],
+                            ["Recommendation system", "https://en.wikipedia.org/wiki/Recommender_system"]
+                        ],
+                        academic: [
+                            ["Attention Economy - Research Paper 1", "https://www.sciencedirect.com/science/article/pii/S0016328723001477"],
+                            ["Attention Economy - Research Paper 2", "https://hdl.handle.net/10871/9307"],
+                            ["International Cultural Policies and Power", "https://khoaqth.ufl.udn.vn/wp-content/imgufl/uploads/quoctehoc/sachmoi/International_Cultural_Policies_and_Power.pdf#page=72"]
+                        ]
+                    },
+                    {
+                        name: "Misinformation & Fake News",
+                        period: "industrial",
+                        links: [
+                            ["Fake news", "https://en.wikipedia.org/wiki/Fake_news"],
+                            ["Propaganda", "https://en.wikipedia.org/wiki/Propaganda"],
+                            ["Misinformation", "https://en.wikipedia.org/wiki/Misinformation"]
+                        ],
+                        academic: [
+                            ["Does Media Literacy Help Identification of Fake News?", "https://journals-sagepub-com.libaccess.sjlibrary.org/doi/10.1177/0002764219869406"],
+                            ["Combating Fake News, Disinformation, and Misinformation", "https://www.tandfonline.com/doi/full/10.1080/23311983.2022.2037229#abstract"],
+                            ["Exploring Echo-Systems: How Algorithms Shape Media", "https://digitalcommons.uri.edu/cgi/viewcontent.cgi?article=1366&context=jmle"],
+                            ["Are You Sure? Truth-Checking as Learning Activity", "https://journals.sagepub.com/doi/10.1177/17470218231206813"],
+                            ["Fake Images: Effects on Credibility Assessment", "http://graphics.berkeley.edu/papers/Shen-FIT-2019-02/Shen-FIT-2019-02.pdf"],
+                            ["Scammers Creating Fake News Videos", "https://www.wired.com/story/scammers-are-creating-fake-news-videos-to-blackmail-victims/"]
+                        ],
+                        artists: [
+                            ["MAD: Diving Deeper into Truth, Trust, and Fake News", "https://www.aam-us.org/2020/02/19/diving-deeper-into-truth-trust-and-fake-news/"],
+                            ["AI Art and Misinformation", "https://montrealethics.ai/ai-art-and-misinformation-approaches-and-strategies-for-media-literacy-and-fact-checking/"],
+                            ["Venice Biennale: Artists Create Truths in Era of Fake News", "https://www.artsy.net/article/artsy-editorial-venice-biennale-artists-create-truths-era-fake-news"],
+                            ["MAD Exhibition: Fake News & Conspiracy Theories", "https://madmuseum.org/press/releases/mad-exhibition-explores-fake-news-sensationalist-headlines-and-conspiracy-theories"],
+                            ["Fake News: Lying Pictures in Dutch Republic", "https://kam.illinois.edu/exhibition/fake-news-lying-pictures-political-prints-dutch-republic"]
+                        ]
+                    },
+                    {
+                        name: "Social Media",
+                        period: "contemporary",
+                        links: [
+                            ["Social media", "https://en.wikipedia.org/wiki/Social_media"],
+                            ["Facebook", "https://en.wikipedia.org/wiki/Facebook"],
+                            ["Twitter", "https://en.wikipedia.org/wiki/Twitter"],
+                            ["Instagram", "https://en.wikipedia.org/wiki/Instagram"],
+                            ["TikTok", "https://en.wikipedia.org/wiki/TikTok"],
+                            ["LinkedIn", "https://en.wikipedia.org/wiki/LinkedIn"],
+                            ["Snapchat", "https://en.wikipedia.org/wiki/Snapchat"],
+                            ["Reddit", "https://en.wikipedia.org/wiki/Reddit"],
+                            ["Pinterest", "https://en.wikipedia.org/wiki/Pinterest"],
+                            ["Discord", "https://en.wikipedia.org/wiki/Discord_(software)"],
+                            ["YouTube", "https://en.wikipedia.org/wiki/YouTube"],
+                            ["Tumblr", "https://en.wikipedia.org/wiki/Tumblr"],
+                            ["BeReal", "https://en.wikipedia.org/wiki/BeReal"],
+                            ["Mastodon", "https://en.wikipedia.org/wiki/Mastodon_(social_network)"],
+                            ["Threads", "https://en.wikipedia.org/wiki/Threads_(social_network)"],
+                            ["Bluesky", "https://en.wikipedia.org/wiki/Bluesky"]
+                        ],
+                        academic: [
+                            ["Undergraduates' Use of Social Media as Information Sources", "https://dr.ntu.edu.sg/bitstream/10220/20380/1/442.full.pdf"],
+                            ["Using Social Media Images as Data", "https://journals.sagepub.com/doi/full/10.1177/14614448211038761"],
+                            ["The Internet's Future Is Looking Bleaker", "https://www.wired.com/story/the-internets-future-is-looking-bleaker-by-the-day/?_sp=c913c044-88f6-4e47-a51b-bdad51924c9c.1737143887405"],
+                            ["The Year of Influencer Political Takeover", "https://www.wired.com/story/this-was-the-year-of-the-influencer-political-takeover/"]
+                        ],
+                        artists: [
+                            ["What About an Exhibition on Social Media Art?", "https://schloss-post.com/exhibition-social-media-art/"],
+                            ["Bridging the Care Gap of Social Media Systems", "https://schloss-post.com/bridging-the-care-gap-of-social-media-systems/"],
+                            ["Get to Know Your Data Self", "https://schloss-post.com/get-know-data-self/"],
+                            ["Blurred Boundaries: Art in the Age of Social Media", "https://researchoutreach.org/articles/blurred-boundaries-art-age-social-media/"],
+                            ["Art in the Instagram Age", "https://www.seattletimes.com/entertainment/visual-arts/art-in-the-instagram-age-how-social-media-is-shaping-art-and-how-you-experience-it/"],
+                            ["Art in the Age of Social Media: Instagram Interaction", "https://www.semanticscholar.org/reader/5fa6b89e2c6909f175e073470f4d07029f8215c8"],
+                            ["Antonio Muntadas - On Translation: Social Networks", "https://www.isea-archives.org/symposia/isea2006/isea2006-artwork-and-performances-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/"],
+                            ["Annina Rust - Sinister Social Network", "https://www.anninaruest.com/a/sinister-network/index.html"]
+                        ]
+                    },
+                    {
+                        name: "Streaming Media",
+                        period: "contemporary",
+                        links: [
+                            ["Streaming media", "https://en.wikipedia.org/wiki/Streaming_media"],
+                            ["Netflix", "https://en.wikipedia.org/wiki/Netflix"],
+                            ["YouTube", "https://en.wikipedia.org/wiki/YouTube"],
+                            ["Twitch", "https://en.wikipedia.org/wiki/Twitch_(service)"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Systems & Networks",
+                themes: [
+                    {
+                        name: "Networks",
+                        period: "digital",
+                        links: [
+                            ["Computer network", "https://en.wikipedia.org/wiki/Computer_network"],
+                            ["Internet", "https://en.wikipedia.org/wiki/Internet"],
+                            ["ARPANET", "https://en.wikipedia.org/wiki/ARPANET"],
+                            ["Wi-Fi", "https://en.wikipedia.org/wiki/Wi-Fi"],
+                            ["5G", "https://en.wikipedia.org/wiki/5G"]
+                        ],
+                        academic: [
+                            ["New Digital Media and Activist Networking", "https://www-jstor-org.libaccess.sjlibrary.org/stable/25046069?seq=1"],
+                            ["The Cloud Is a Prison", "https://www.wired.com/story/the-cloud-is-a-prison-can-the-local-first-software-movement-set-us-free/"],
+                            ["IoT Botnets Delivering Record DDoSes", "https://arstechnica.com/security/2025/01/the-internet-is-once-again-awash-with-iot-botnets-delivering-record-ddoses/"]
+                        ]
+                    },
+                    {
+                        name: "Communication Systems",
+                        period: "industrial",
+                        links: [
+                            ["Telegraphy", "https://en.wikipedia.org/wiki/Telegraphy"],
+                            ["Telephone", "https://en.wikipedia.org/wiki/Telephone"],
+                            ["Radio", "https://en.wikipedia.org/wiki/Radio"],
+                            ["Television", "https://en.wikipedia.org/wiki/Television"],
+                            ["Fax", "https://en.wikipedia.org/wiki/Fax"]
+                        ],
+                        academic: [
+                            ["Personal Connections in the Digital Age", "https://books.google.com/books?hl=en&lr=&id=4_1RCgAAQBAJ&oi=fnd&pg=PT6"],
+                            ["Technology Enhancing or Hindering Communication?", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7843959/"],
+                            ["Connecting in the Digital Age", "https://rikithompson.ds.lib.uw.edu/visuallife/connecting-in-the-digital-age-navigating-technology-and-social-media/"],
+                            ["Impact of Social Interaction in Digital Age", "https://osf.io/preprints/osf/hxcuk"],
+                            ["New Forms of Interaction: Use of the Telephone", "https://www.mdpi.com/2076-0760/13/3/153"],
+                            ["Digital Revolution: How Technology Changes Communication", "https://rikithompson.ds.lib.uw.edu/visuallife/the-digital-revolution-how-technology-is-changing-the-way-we-communicate-and-interact/"],
+                            ["Changes in Communication Patterns", "https://journal.arrus.id/index.php/soshum/article/view/1992/1297"],
+                            ["Has Technology Killed Face-To-Face Communication?", "https://www.entrepreneur.com/science-technology/the-impact-of-digital-communication-on-social-intelligence/466790"],
+                            ["Art of Communication in the Digital Age", "https://drpress.org/ojs/index.php/ijeh/article/view/14914"],
+                            ["Human Communication in a Digital Age", "https://core.ac.uk/download/pdf/234653577.pdf"],
+                            ["Mediated Interpersonal Communication", "https://www.atlantis-press.com/proceedings/imc-19/125938028"],
+                            ["Impact of Social Networks on Human Communication", "https://jurnal.tintaemas.id/index.php/sehati/article/view/252/205"],
+                            ["Staying Connected While Physically Apart", "https://journals.sagepub.com/doi/full/10.1177/1461444820985442"],
+                            ["Does Internet Bring People Closer?", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9687672/"],
+                            ["Computer-Mediated Communication and Well-Being", "https://hcom.illinois.edu/wp-content/uploads/2023/03/HighRuppelMcEwanCaughlin.pdf"],
+                            ["Alone Together: After COVID Communication", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8255679/"],
+                            ["Interpersonal Relationships in the Digital Age", "https://www.tandfonline.com/doi/epdf/10.1080/00224545.2018.1473835?needAccess=true"],
+                            ["Communication and the Digital Age", "https://ecampusontario.pressbooks.pub/professionalcommuncationmindfulapproach/chapter/communicaton-and-the-digital-age/"]
+                        ]
+                    },
+                    {
+                        name: "Satellite & Remote Sensing",
+                        period: "digital",
+                        links: [
+                            ["Satellite imagery", "https://en.wikipedia.org/wiki/Satellite_imagery"],
+                            ["Communication satellite", "https://en.wikipedia.org/wiki/Communication_satellite"],
+                            ["GPS", "https://en.wikipedia.org/wiki/Global_Positioning_System"]
+                        ]
+                    },
+                    {
+                        name: "Telepresence & Telerobotics",
+                        period: "contemporary",
+                        links: [
+                            ["Telepresence", "https://en.wikipedia.org/wiki/Telepresence"],
+                            ["Telerobotics", "https://en.wikipedia.org/wiki/Telerobotics"],
+                            ["Drones", "https://en.wikipedia.org/wiki/Drone"]
+                        ],
+                        artists: [
+                            ["Eric Paulos, John Canny - Personal Roving Presence", "http://www.prop.org/"],
+                            ["Nina Sobell, Emily Hartzell - VirtuAlice", "https://www.ninasobell.com/ninasobell/parkbench_docs/alice/index.html"],
+                            ["Adrianne Wortzel - Camouflage Town", "http://artnetweb.com/camouflagetown/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "AI, Bias & Digital Ethics",
+                themes: [
+                    {
+                        name: "AI Bias",
+                        period: "contemporary",
+                        links: [
+                            ["Bias in artificial intelligence", "https://en.wikipedia.org/wiki/AI_bias"],
+                            ["Algorithmic bias", "https://en.wikipedia.org/wiki/Algorithmic_bias"],
+                            ["Machine learning", "https://en.wikipedia.org/wiki/Machine_learning"]
+                        ],
+                        academic: [
+                            ["The Algorithmic Divide and Equality in AI", "https://scholarship.law.ufl.edu/cgi/viewcontent.cgi?article=1593&context=flr"],
+                            ["Algorithmic Bias in Data-Driven Innovation", "https://par.nsf.gov/servlets/purl/10344127"],
+                            ["To Navigate AI, World Needs New Turing Test", "https://www.wired.com/story/ai-new-turing-test/"],
+                            ["The Blurred Reality of AI's 'Human-Washing'", "https://www.wired.com/story/gadget-lab-podcast-651/"],
+                            ["What Happens When You Turn Life Over to AI Assistant?", "https://www.wired.com/story/uncanny-valley-podcast-9-ai-assistants/"],
+                            ["Google-Backed Chatbots Ranting About Dildos", "https://futurism.com/character-ai-glitch-ranting-dildos"],
+                            ["41% of Companies Plan to Reduce Workforce by 2030 Due to AI", "https://www.cnn.com/2025/01/08/business/ai-job-losses-by-2030-intl/index.html"],
+                            ["Navigating Leadership in Age of AI", "https://www.forbes.com/sites/vibhasratanjee/2025/01/24/navigating-the-future-of-leadership-in-the-age-of-ai-and-augmentation/"]
+                        ],
+                        artists: [
+                            ["Interrogating AI Bias through Digital Art", "https://just-tech.ssrc.org/field-reviews/interrogating-ai-bias-through-digital-art/"],
+                            ["Algorithmic Anxiety in Contemporary Art", "https://networkcultures.org/wp-content/uploads/2020/06/AlgorithmicAnxietyPDF.pdf"],
+                            ["Algorithmic Bias Art Exhibition", "https://www.goethe.de/prj/k40/en/kun/aia.html"],
+                            ["SKU Market: Satirical Lens on Algorithmic Bias", "https://sciencegallery.org/stories/sku-market-a-satirical-lens-on-algorithmic-bias-through-art-science-collaboration"],
+                            ["Memo Akten - Learning to See", "https://www.memo.tv/works/learning-to-see/"],
+                            ["Lynn Hershman Leeson - Shadow Stalker", "https://www.lynnhershman.com/project/shadow-stalker/"]
+                        ]
+                    },
+                    {
+                        name: "The Alignment Problem",
+                        period: "contemporary",
+                        links: [
+                            ["AI alignment", "https://en.wikipedia.org/wiki/AI_alignment"],
+                            ["Superintelligence", "https://en.wikipedia.org/wiki/Superintelligence"]
+                        ],
+                        academic: [
+                            ["The Alignment Problem - Medical Ethics", "https://jaapl.org/content/52/2/274"],
+                            ["AI Alignment Research Paper 1", "https://arxiv.org/pdf/2209.00626"],
+                            ["AI Alignment Research Paper 2", "https://link.springer.com/article/10.1007/s00146-024-02039-2"]
+                        ]
+                    },
+                    {
+                        name: "Digital Media Ethics",
+                        period: "contemporary",
+                        links: [
+                            ["Digital media ethics", "https://en.wikipedia.org/wiki/Digital_media"],
+                            ["Information ethics", "https://en.wikipedia.org/wiki/Information_ethics"]
+                        ],
+                        academic: [
+                            ["Media Ethics in the Digital Age", "https://www.mediaethicsmagazine.com/index.php/browse-back-issues/144-fall-2012/3998645-concept-media-ethics-in-the-digital-age"],
+                            ["Young People, Ethics, and New Digital Media", "https://katiedavisresearch.com/wp-content/uploads/2014/01/2009_GP_whitepaper.pdf"],
+                            ["Image Ethics in the Digital Age", "https://www.jstor.org/stable/10.5749/j.ctt1rrdb2z"]
+                        ]
+                    },
+                    {
+                        name: "Deepfakes",
+                        period: "contemporary",
+                        links: [
+                            ["Deepfakes", "https://en.wikipedia.org/wiki/Deepfake"]
+                        ],
+                        academic: [
+                            ["MIT Deepfakes Project", "https://deepfakes.virtuality.mit.edu/"]
+                        ],
+                        artists: [
+                            ["Deep Fakes: Art and Its Double", "https://www.e-flux.com/announcements/412323/deep-fakes-art-and-its-double/"],
+                            ["CAFA Museum Deepfakes Exhibition", "https://www.cafamuseum.org/en/exhibit/newsdetail/2527"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Digital Inequality & Access",
+                themes: [
+                    {
+                        name: "Digital Divide",
+                        period: "contemporary",
+                        links: [
+                            ["Digital divide", "https://en.wikipedia.org/wiki/Digital_divide"]
+                        ],
+                        academic: [
+                            ["Digital Inequality in Disconnection Practices", "https://academic.oup.com/joc/article/73/5/494/7221371"],
+                            ["Why Addressing Digital Inequality Should Be a Priority", "https://onlinelibrary.wiley.com/doi/full/10.1002/isd2.12255"],
+                            ["Digital Inequality During COVID-19", "https://www.sciencedirect.com/science/article/pii/S074756322100039X?via%3Dihub"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Prehistoric & Ancient Systems",
+                themes: [
+                    {
+                        name: "Writing & Recordkeeping",
+                        period: "ancient",
+                        links: [
+                            ["Cuneiform", "https://en.wikipedia.org/wiki/Cuneiform"],
+                            ["Hieroglyphics", "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"],
+                            ["Quipu", "https://en.wikipedia.org/wiki/Quipu"],
+                            ["Petroglyph", "https://en.wikipedia.org/wiki/Petroglyph"]
+                        ]
+                    },
+                    {
+                        name: "Early Communication",
+                        period: "ancient",
+                        links: [
+                            ["Smoke signal", "https://en.wikipedia.org/wiki/Smoke_signal"],
+                            ["Drum signaling", "https://en.wikipedia.org/wiki/Drums_in_communication"],
+                            ["Postal system", "https://en.wikipedia.org/wiki/Postal_system"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Print & Industrial Media",
+                themes: [
+                    {
+                        name: "Print Media",
+                        period: "industrial",
+                        links: [
+                            ["Printing press", "https://en.wikipedia.org/wiki/Printing_press"],
+                            ["Newspaper", "https://en.wikipedia.org/wiki/Newspaper"],
+                            ["Pamphlet", "https://en.wikipedia.org/wiki/Pamphlet"]
+                        ]
+                    },
+                    {
+                        name: "Photography & Film",
+                        period: "industrial",
+                        links: [
+                            ["Photography", "https://en.wikipedia.org/wiki/Photography"],
+                            ["Motion picture film", "https://en.wikipedia.org/wiki/History_of_film"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Early Digital Systems",
+                themes: [
+                    {
+                        name: "Mainframes & Early Computing",
+                        period: "digital",
+                        links: [
+                            ["Mainframe computer", "https://en.wikipedia.org/wiki/Mainframe_computer"],
+                            ["Punch card", "https://en.wikipedia.org/wiki/Punched_card"],
+                            ["Magnetic tape data storage", "https://en.wikipedia.org/wiki/Magnetic_tape_data_storage"]
+                        ]
+                    },
+                    {
+                        name: "Internet Foundations",
+                        period: "digital",
+                        links: [
+                            ["ARPANET", "https://en.wikipedia.org/wiki/ARPANET"],
+                            ["Email", "https://en.wikipedia.org/wiki/Email"],
+                            ["Bulletin Board System", "https://en.wikipedia.org/wiki/Bulletin_board_system"],
+                            ["Fiber-optic communication", "https://en.wikipedia.org/wiki/Fiber-optic_communication"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Data Visualization & Representation",
+                themes: [
+                    {
+                        name: "Data Visualization",
+                        period: "contemporary",
+                        links: [
+                            ["Data visualization", "https://en.wikipedia.org/wiki/Data_visualization"]
+                        ],
+                        academic: [
+                            ["Data Visualization Research Paper 1", "https://cmci.colorado.edu/visualab/papers/p26-szafir.pdf"],
+                            ["Data Visualization Research Paper 2", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7733875/"],
+                            ["Data Visualization Research Paper 3", "https://journals.sagepub.com/doi/pdf/10.1080/03080188.2021.1872874"]
+                        ],
+                        artists: [
+                            ["Martin Wattenberg, Fernanda Viegas - Many Eyes", "http://hint.fm/projects/manyeyes/"],
+                            ["W. Bradford Paley - TextArc", "http://wbradfordpaley.com/live/#"],
+                            ["Benjamin Fry - Valence", "https://benfry.com/valence/"],
+                            ["Georg Legrady - Annotated Archive of the Cold War", "https://www.mat.ucsb.edu/~g.legrady/glWeb/Projects/anecdote/Anecdote.html"],
+                            ["Lev Manovich - The Aggregate Eye", "https://phototrails.net/exhibition/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Net Art & Digital Expression",
+                themes: [
+                    {
+                        name: "Interactive Net Art",
+                        period: "contemporary",
+                        links: [
+                            ["Net art", "https://en.wikipedia.org/wiki/Net_art"]
+                        ],
+                        artists: [
+                            ["Olia Lialina - My Boyfriend Came Back from the War", "http://www.teleportacia.org/war/"],
+                            ["Toni Dove - Artificial Changelings", "https://tonidove.com/artificial-changelings/video/"],
+                            ["Jaap de Jonge - Speakers Corner", "https://www.jaapdejonge.nl/portfolio/opdrachten/speak.html"],
+                            ["Golan Levin - The Dumpster", "https://www.flong.com/archive/projects/dumpster/index.html"],
+                            ["Warren Sack - Agonistics: A Language Game", "http://www.medienkunstnetz.de/works/agonistics/"],
+                            ["Angie Waller - myfrienemies.com", "https://angiewaller.com/Archive-set"],
+                            ["Marina Zurkow, Scott Paterson, Julian Bleecker - PDPal", "https://www.pdpal.com/dev/about/"],
+                            ["Q.S. Serafijn, Lars Spuybroek - D-Tower", "https://v2.nl/works/d-tower"],
+                            ["Mark Napier - Riot", "https://potatoland.org/riot/"],
+                            ["Rafael Rozendaal - Net Art Works", "https://www.nothingeverhappens.com/"],
+                            ["Joe Hamilton - Hyper Geography", "https://vimeo.com/31768818"],
+                            ["Jonathan Vingiano - Net Art Portfolio", "https://jonathanvingiano.com/work"],
+                            ["Scott Snibbe - MotionPhone & REWORK", "https://www.snibbe.com/apps/motionphone-app"],
+                            ["I/O/D - Webstalker", "http://www.medienkunstnetz.de/works/webstalker/"],
+                            ["Alex McLean - forkbomb.pl", "https://zkm.de/en/artwork/forkbombpl"],
+                            ["Tabor Robak - Colorwheel & Flatearth.io", "https://www.taborrobak.com/colorwheel"],
+                            ["Refik Anadol - Melting Memories", "https://refikanadolstudio.com/projects/melting-memories/"],
+                            ["Evan Roth - Landscapes", "http://www.evan-roth.com/~/works/landscapes/#hemisphere=east&strand=75"],
+                            ["Clement Valla - Postcards from Google Earth", "https://clementvalla.com/work/postcards-from-google-earth/"],
+                            ["Jan Robert Leegte - Scrollbar Composition", "http://www.scrollbarcomposition.com/"],
+                            ["Addie Wagenknecht - Data and Dragons", "https://addiewagenknecht.squarespace.com/works/data-and-dragons"],
+                            ["Constant Dullaart - Jennifer in Paradise", "https://constantdullaart.com/jennifer/"],
+                            ["Heath Bunting - Read Me", "https://www.irational.org/_readme.html"],
+                            ["Jonn Ippolito, Keith Frank, Janet Cohen - The Unreliable Archivist", "http://www.three.org/z/UA/#"],
+                            ["Maciej Wisniewski - Netomat", "https://www.netomat.net/"]
+                        ]
+                    },
+                    {
+                        name: "Interactive Text & Narrative",
+                        period: "contemporary",
+                        links: [
+                            ["Interactive fiction", "https://en.wikipedia.org/wiki/Interactive_fiction"]
+                        ],
+                        artists: [
+                            ["Camille Utterback - Text Rain", "http://camilleutterback.com/projects/text-rain/"],
+                            ["David Small, Tom White - Stream of Consciousness", "https://www.youtube.com/watch?v=5onPBBpGed8"],
+                            ["John Maeda - Tap, Type, Write", "https://maedastudio.com/2004/rbooks2k/ttw.html"],
+                            ["Mark Amerika - Grammatron", "https://www.grammatron.com/"],
+                            ["Porpentine Charity Heartscape - With Those We Love Alive", "https://xrafstar.monster/games/twine/wtwla/"],
+                            ["Lynn Hershman Leeson - Lorna", "https://www.lynnhershman.com/project/lorna/"],
+                            ["Grahame Weinbren - Sonata & Rehearsal of Memory", "http://www.medienkunstnetz.de/works/sonata/images/1/"],
+                            ["David Blair - WAXWEB", "https://www.waxweb.org/"],
+                            ["Noah Wardrip-Fruin et al - Impermanence Agent", "http://www.impermanenceagent.org/agent/essay.html"],
+                            ["Martin Wattenberg, Marek Walczak - Apartment", "https://www.bewitched.com/apartment.html"],
+                            ["Masaki Fujihata - Beyond Pages", "https://www.youtube.com/watch?v=6Ek2DW7aV68"]
+                        ]
+                    },
+                    {
+                        name: "Digital Music & Sound",
+                        period: "contemporary",
+                        links: [
+                            ["Electronic music", "https://en.wikipedia.org/wiki/Electronic_music"]
+                        ],
+                        artists: [
+                            ["Cory Archangel - Drei Klavierstucke", "https://coryarcangel.com/things-i-made/2009-003-dreiklavierstucke-op-11.html"],
+                            ["Casey Reas & Jan St. Werner - Compressed Cinema", "https://compressedcinema.net/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Surveillance & Mapping Technologies",
+                themes: [
+                    {
+                        name: "Urban Surveillance & Mapping",
+                        period: "contemporary",
+                        links: [
+                            ["Surveillance", "https://en.wikipedia.org/wiki/Surveillance"]
+                        ],
+                        artists: [
+                            ["Bureau of Inverse Technology - The Antiterror Line", "https://www.bureauit.org/antiterror/"],
+                            ["Teri Rueb - Core Sample", "http://terirueb.net/core-sample-2007/"],
+                            ["C5 - Landscape Initiative", "http://www.c5corp.com/projects/perfectview/index.shtml"],
+                            ["Usman Haque - Sky Ear", "https://haque.co.uk/work/sky-ear/"],
+                            ["Rafael Lozano-Hemmer - Amodal Suspension", "https://www.lozano-hemmer.com/amodal_suspension.php"],
+                            ["Rafael Lozano-Hemmer - Voice Tunnel", "https://www.lozano-hemmer.com/voice_tunnel.php"],
+                            ["Giselle Beiguelman - Sometimes Always, Sometimes Never", "https://www.desvirtual.com/project/sometimes-always/"],
+                            ["Jenny Marketou - Be Careful Who Sees You When You Dream", "http://www.jennymarketou.net/works_2005_2.html"],
+                            ["Michelle Teran - Life: A User's Manual", "https://impakt.nl/channel/films/life-a-users-manual/"],
+                            ["Ricardo Miranda Zuniga - The Public Broadcast Cart", "https://ambriente.com/wifi/index.php"],
+                            ["Marko Peljhan - Makrolab", "https://v2.nl/works/makrolab"],
+                            ["Konrad Becker - System-77 Civil Counter-Reconnaissance", "https://s-77ccr.org/about.php"],
+                            ["Preemptive Media - Zapped!", "https://heidikumao.net/zapped/"],
+                            ["Eric Paulos - Participatory Urbanism", "http://www.urban-atmospheres.net/ParticipatoryUrbanism/index.html"],
+                            ["Beatriz da Costa, Cina Hazegh - PigeonBlog", "https://nideffer.net/shaniweb/pigeonblog.php"],
+                            ["Aram Bartholl - Dead Drops", "https://deaddrops.com/"],
+                            ["Steve Mann - Wearable Wireless Webcam", "http://wearcam.org/myviews4.html"],
+                            ["ART+COM - TerraVision", "https://artcom.de/en/?project=terravision"],
+                            ["Warren Sack - Conversation Map", "http://www.medienkunstnetz.de/works/conversation-map/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Cybernetics & Systems Theory",
+                themes: [
+                    {
+                        name: "Cybernetics",
+                        period: "digital",
+                        links: [
+                            ["Cybernetics", "https://en.wikipedia.org/wiki/Cybernetics"]
+                        ],
+                        academic: [
+                            ["Cybernetic Aesthetics", "http://www.medienkunstnetz.de/themes/aesthetics_of_the_digital/cybernetic_aesthetics/print/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Digital Economy & Labor",
+                themes: [
+                    {
+                        name: "Economic Data Visualization",
+                        period: "contemporary",
+                        links: [
+                            ["Economic data", "https://en.wikipedia.org/wiki/Economic_data"]
+                        ],
+                        artists: [
+                            ["Nancy Paterson - Stock Market Skirt", "https://vacuumwoman.senecacollege.ca/About/Main/about.html"],
+                            ["Lynn Hershman Leeson - Synthia Stock Ticker", "https://www.lynnhershman.com/project/synthia-stock-ticker-2/"],
+                            ["John Klima - Ecosystem", "http://www.cityarts.com/ecosystm/"],
+                            ["Alex Galloway - Carnivore", "https://r-s-g.org/carnivore/"],
+                            ["Lisa Jevbratt - 1:1", "http://128.111.69.4/~jevbratt/1_to_1/index_ng.html"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "Immersive & Extended Reality",
+                themes: [
+                    {
+                        name: "Immersive Installations",
+                        period: "contemporary",
+                        links: [
+                            ["Immersive technology", "https://en.wikipedia.org/wiki/Immersive_technology"]
+                        ],
+                        artists: [
+                            ["Eduardo Kac - Teleporting an Unknown State", "https://www.ekac.org/teleporting.html"],
+                            ["Fakeshop - Capsule Hotel", "https://jeffgompertz.site/capsule-hotel/"],
+                            ["Bill Seaman - An Engine of Many Senses", "https://billseaman.com/works/2013_engine_of_many_senses.html"],
+                            ["Jennifer and Kevin McCoy - Every Shot Every Episode", "https://www.mccoyspace.com/project/51/"]
+                        ]
+                    }
+                ]
+            },
+            {
+                bigIdea: "TechLash & Platform Critique",
+                themes: [
+                    {
+                        name: "TechLash",
+                        period: "contemporary",
+                        links: [
+                            ["Techlash", "https://en.wikipedia.org/wiki/Techlash"]
+                        ],
+                        academic: [
+                            ["TechLash Academic Paper", "https://library.oapen.org/bitstream/handle/20.500.12657/37366/978-3-030-43279-9.pdf"]
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        function render() {
+            const search = document.getElementById("searchInput").value.toLowerCase();
+            const timeline = document.getElementById("timelineFilter").value;
+            const container = document.getElementById("content");
+            container.innerHTML = "";
+
+            data.forEach(section => {
+                let sectionHTML = `<div class="big-idea"><h2>${section.bigIdea}</h2>`;
+                let hasVisibleThemes = false;
+
+                section.themes.forEach(theme => {
+                    if (timeline === "all" || theme.period === timeline) {
+                        const themeMatch = theme.name.toLowerCase().includes(search);
+                        const matchingLinks = theme.links.filter(link => 
+                            link[0].toLowerCase().includes(search)
+                        );
+                        const matchingAcademic = theme.academic ? theme.academic.filter(link => 
+                            link[0].toLowerCase().includes(search)
+                        ) : [];
+                        const matchingArtists = theme.artists ? theme.artists.filter(link => 
+                            link[0].toLowerCase().includes(search)
+                        ) : [];
+
+                        if (search === "" || themeMatch || matchingLinks.length > 0 || 
+                            matchingAcademic.length > 0 || matchingArtists.length > 0) {
+                            hasVisibleThemes = true;
+                            
+                            const periodLabel = {
+                                'ancient': 'Ancient / Pre-1500',
+                                'industrial': 'Industrial (1500–1950)',
+                                'digital': 'Digital (1950–2000)',
+                                'contemporary': 'Contemporary (2000–Now)'
+                            };
+                            
+                            sectionHTML += `<div class="theme">
+                                <h3>${theme.name}<span class="period-badge">${periodLabel[theme.period]}</span></h3>`;
+
+                            // Wikipedia/Reference Links
+                            if (matchingLinks.length > 0 || search === "") {
+                                sectionHTML += `<div class="section-title">Reference Links:</div><div class="links">`;
+                                (matchingLinks.length > 0 ? matchingLinks : theme.links).forEach(link => {
+                                    sectionHTML += `<a href="${link[1]}" target="_blank">${link[0]}</a>`;
+                                });
+                                sectionHTML += `</div>`;
+                            }
+
+                            // Academic Resources
+                            if (theme.academic && (matchingAcademic.length > 0 || search === "")) {
+                                sectionHTML += `<div class="section-title">Academic Resources:</div><div class="links">`;
+                                (matchingAcademic.length > 0 ? matchingAcademic : theme.academic).forEach(link => {
+                                    sectionHTML += `<a href="${link[1]}" target="_blank">${link[0]}</a>`;
+                                });
+                                sectionHTML += `</div>`;
+                            }
+
+                            // Artist Works
+                            if (theme.artists && (matchingArtists.length > 0 || search === "")) {
+                                sectionHTML += `<div class="section-title">Artist Works & Exhibitions:</div><div class="links">`;
+                                (matchingArtists.length > 0 ? matchingArtists : theme.artists).forEach(link => {
+                                    sectionHTML += `<a href="${link[1]}" target="_blank">${link[0]}</a>`;
+                                });
+                                sectionHTML += `</div>`;
+                            }
+
+                            sectionHTML += `</div>`;
+                        }
+                    }
+                });
+
+                if (hasVisibleThemes) {
+                    sectionHTML += `</div>`;
+                    container.innerHTML += sectionHTML;
+                }
+            });
+        }
+
+        document.getElementById("searchInput").addEventListener("input", render);
+        document.getElementById("timelineFilter").addEventListener("change", render);
+        render();
+    </script>
+</body>
+</html>
